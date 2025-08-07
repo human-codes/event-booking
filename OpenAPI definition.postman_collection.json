@@ -1,0 +1,576 @@
+{
+	"info": {
+		"_postman_id": "ca1ef2b1-e74f-4418-8770-1df998c53372",
+		"name": "OpenAPI definition",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41735966",
+		"_collection_link": "https://tridev-0990.postman.co/workspace/Tridev-Workspace~1b89b7d6-ce3d-4e1d-82e2-291d759d89b7/collection/41735966-ca1ef2b1-e74f-4418-8770-1df998c53372?action=share&source=collection_link&creator=41735966"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "event",
+					"item": [
+						{
+							"name": "{eventId}",
+							"item": [
+								{
+									"name": "register",
+									"item": [
+										{
+											"name": "register For Event",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/event/:eventId/register",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"event",
+														":eventId",
+														"register"
+													],
+													"variable": [
+														{
+															"key": "eventId",
+															"value": "urn:uuid:b5c0ccaa-35dd-e36f-d8a5-9b4ade87b39d",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/event/:eventId/register",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"event",
+																":eventId",
+																"register"
+															],
+															"variable": [
+																{
+																	"key": "eventId"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{}"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "create",
+							"item": [
+								{
+									"name": "create Event",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"datetime\": \"1947-10-16T17:38:21.150Z\",\n  \"description\": \"string\",\n  \"location\": \"string\",\n  \"title\": \"string\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/event/create",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"event",
+												"create"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"datetime\": \"1947-10-16T17:38:21.150Z\",\n  \"description\": \"string\",\n  \"location\": \"string\",\n  \"title\": \"string\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/event/create",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"event",
+														"create"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"success\": false,\n  \"message\": \"string\",\n  \"data\": {}\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "registrations",
+							"item": [
+								{
+									"name": "get My Registrations",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/event/registrations",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"event",
+												"registrations"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/event/registrations",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"event",
+														"registrations"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "my",
+							"item": [
+								{
+									"name": "get My Events",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/event/my",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"event",
+												"my"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/event/my",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"event",
+														"my"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"success\": false,\n  \"message\": \"string\",\n  \"data\": [\n    {\n      \"id\": \"5d16a24e-7fcc-4b6d-e337-2cd03bb133d8\",\n      \"createdAt\": \"1984-06-30T16:02:30.104Z\",\n      \"updatedAt\": \"1968-10-07T04:53:29.124Z\",\n      \"title\": \"string\",\n      \"description\": \"string\",\n      \"location\": \"string\",\n      \"datetime\": \"1959-09-12T13:51:18.017Z\",\n      \"organizer\": {\n        \"id\": \"065bc1b0-e653-b0d0-6e45-d0ba590a557c\",\n        \"createdAt\": \"1991-06-02T16:36:48.843Z\",\n        \"updatedAt\": \"2001-04-14T12:51:13.787Z\",\n        \"username\": \"string\",\n        \"email\": \"string\",\n        \"password\": \"string\",\n        \"roles\": [\n          {\n            \"id\": \"5d7082fa-3957-a3ae-a221-2da5de9fb108\",\n            \"createdAt\": \"1972-10-02T16:58:46.181Z\",\n            \"updatedAt\": \"2008-12-23T14:06:00.581Z\",\n            \"roleName\": \"ROLE_USER\",\n            \"authority\": \"string\"\n          },\n          {\n            \"id\": \"urn:uuid:331c3432-7118-1896-c4f6-e9fab2c347f2\",\n            \"createdAt\": \"2011-05-01T13:11:53.649Z\",\n            \"updatedAt\": \"2024-08-02T10:39:35.161Z\",\n            \"roleName\": \"ROLE_ADMIN\",\n            \"authority\": \"string\"\n          }\n        ],\n        \"authorities\": [\n          {\n            \"authority\": \"string\"\n          },\n          {\n            \"authority\": \"string\"\n          }\n        ],\n        \"enabled\": false,\n        \"credentialsNonExpired\": true,\n        \"accountNonExpired\": false,\n        \"accountNonLocked\": true\n      }\n    },\n    {\n      \"id\": \"urn:uuid:b7355793-050b-9ae2-5b11-73e5c65de647\",\n      \"createdAt\": \"2003-11-29T01:45:30.879Z\",\n      \"updatedAt\": \"1952-05-26T07:51:11.904Z\",\n      \"title\": \"string\",\n      \"description\": \"string\",\n      \"location\": \"string\",\n      \"datetime\": \"1978-12-14T09:30:22.375Z\",\n      \"organizer\": {\n        \"id\": \"urn:uuid:fad69303-17b5-35a3-407d-5c170e2c9ba7\",\n        \"createdAt\": \"1958-09-26T00:00:41.952Z\",\n        \"updatedAt\": \"1987-01-16T08:52:06.178Z\",\n        \"username\": \"string\",\n        \"email\": \"string\",\n        \"password\": \"string\",\n        \"roles\": [\n          {\n            \"id\": \"7cfab0c1-978c-a68a-e3b2-31698cc8c338\",\n            \"createdAt\": \"1962-09-24T23:05:50.787Z\",\n            \"updatedAt\": \"1969-01-23T23:26:38.619Z\",\n            \"roleName\": \"ROLE_ADMIN\",\n            \"authority\": \"string\"\n          },\n          {\n            \"id\": \"b21ad952-2cb8-8b15-927d-1312b57189ee\",\n            \"createdAt\": \"1945-09-24T04:05:46.314Z\",\n            \"updatedAt\": \"1947-11-01T08:11:07.191Z\",\n            \"roleName\": \"ROLE_USER\",\n            \"authority\": \"string\"\n          }\n        ],\n        \"authorities\": [\n          {\n            \"authority\": \"string\"\n          },\n          {\n            \"authority\": \"string\"\n          }\n        ],\n        \"enabled\": false,\n        \"credentialsNonExpired\": true,\n        \"accountNonExpired\": true,\n        \"accountNonLocked\": false\n      }\n    }\n  ]\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "get All Events",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/event",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"event"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/event",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"event"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"success\": false,\n  \"message\": \"string\",\n  \"data\": [\n    {\n      \"id\": \"5d16a24e-7fcc-4b6d-e337-2cd03bb133d8\",\n      \"createdAt\": \"1984-06-30T16:02:30.104Z\",\n      \"updatedAt\": \"1968-10-07T04:53:29.124Z\",\n      \"title\": \"string\",\n      \"description\": \"string\",\n      \"location\": \"string\",\n      \"datetime\": \"1959-09-12T13:51:18.017Z\",\n      \"organizer\": {\n        \"id\": \"065bc1b0-e653-b0d0-6e45-d0ba590a557c\",\n        \"createdAt\": \"1991-06-02T16:36:48.843Z\",\n        \"updatedAt\": \"2001-04-14T12:51:13.787Z\",\n        \"username\": \"string\",\n        \"email\": \"string\",\n        \"password\": \"string\",\n        \"roles\": [\n          {\n            \"id\": \"5d7082fa-3957-a3ae-a221-2da5de9fb108\",\n            \"createdAt\": \"1972-10-02T16:58:46.181Z\",\n            \"updatedAt\": \"2008-12-23T14:06:00.581Z\",\n            \"roleName\": \"ROLE_USER\",\n            \"authority\": \"string\"\n          },\n          {\n            \"id\": \"urn:uuid:331c3432-7118-1896-c4f6-e9fab2c347f2\",\n            \"createdAt\": \"2011-05-01T13:11:53.649Z\",\n            \"updatedAt\": \"2024-08-02T10:39:35.161Z\",\n            \"roleName\": \"ROLE_ADMIN\",\n            \"authority\": \"string\"\n          }\n        ],\n        \"authorities\": [\n          {\n            \"authority\": \"string\"\n          },\n          {\n            \"authority\": \"string\"\n          }\n        ],\n        \"enabled\": false,\n        \"credentialsNonExpired\": true,\n        \"accountNonExpired\": false,\n        \"accountNonLocked\": true\n      }\n    },\n    {\n      \"id\": \"urn:uuid:b7355793-050b-9ae2-5b11-73e5c65de647\",\n      \"createdAt\": \"2003-11-29T01:45:30.879Z\",\n      \"updatedAt\": \"1952-05-26T07:51:11.904Z\",\n      \"title\": \"string\",\n      \"description\": \"string\",\n      \"location\": \"string\",\n      \"datetime\": \"1978-12-14T09:30:22.375Z\",\n      \"organizer\": {\n        \"id\": \"urn:uuid:fad69303-17b5-35a3-407d-5c170e2c9ba7\",\n        \"createdAt\": \"1958-09-26T00:00:41.952Z\",\n        \"updatedAt\": \"1987-01-16T08:52:06.178Z\",\n        \"username\": \"string\",\n        \"email\": \"string\",\n        \"password\": \"string\",\n        \"roles\": [\n          {\n            \"id\": \"7cfab0c1-978c-a68a-e3b2-31698cc8c338\",\n            \"createdAt\": \"1962-09-24T23:05:50.787Z\",\n            \"updatedAt\": \"1969-01-23T23:26:38.619Z\",\n            \"roleName\": \"ROLE_ADMIN\",\n            \"authority\": \"string\"\n          },\n          {\n            \"id\": \"b21ad952-2cb8-8b15-927d-1312b57189ee\",\n            \"createdAt\": \"1945-09-24T04:05:46.314Z\",\n            \"updatedAt\": \"1947-11-01T08:11:07.191Z\",\n            \"roleName\": \"ROLE_USER\",\n            \"authority\": \"string\"\n          }\n        ],\n        \"authorities\": [\n          {\n            \"authority\": \"string\"\n          },\n          {\n            \"authority\": \"string\"\n          }\n        ],\n        \"enabled\": false,\n        \"credentialsNonExpired\": true,\n        \"accountNonExpired\": true,\n        \"accountNonLocked\": false\n      }\n    }\n  ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "auth",
+					"item": [
+						{
+							"name": "sign-up",
+							"item": [
+								{
+									"name": "register",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"string\",\n  \"password\": \"FP6SG18K)UdJ;\",\n  \"username\": \"stri\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/auth/sign-up",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"auth",
+												"sign-up"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"email\": \"string\",\n  \"password\": \"FP6SG18K)UdJ;\",\n  \"username\": \"stri\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/auth/sign-up",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"auth",
+														"sign-up"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "sign-in",
+							"item": [
+								{
+									"name": "login",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"password\": \"stri\",\n  \"username\": \"string\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/auth/sign-in",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"auth",
+												"sign-in"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"password\": \"stri\",\n  \"username\": \"string\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/auth/sign-in",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"auth",
+														"sign-in"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{}"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080"
+		}
+	]
+}
